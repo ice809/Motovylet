@@ -99,7 +99,7 @@ a:hover {
 /* ── HOME HERO ── */
 .home-hero {
   position: relative;
-  min-height: 540px;
+  height: clamp(640px, 70vh, 780px);
   background-color: var(--bg-primary);
   border-bottom: 1px solid var(--border);
   display: flex;
