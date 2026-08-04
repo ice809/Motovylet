@@ -242,6 +242,35 @@ a:hover {
   padding: 0.35rem 0.8rem;
 }
 
+/* ── ARTICLE MAP IMAGE ── */
+.article-map {
+  margin: 2rem 0 2.5rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.article-map img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.article-map figcaption {
+  padding: 0.6rem 1rem;
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+  border-top: 1px solid var(--border);
+}
+
 /* ── ARTICLE PAGE ── */
 .trip-article {
   padding-bottom: 4rem;
