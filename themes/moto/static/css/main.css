@@ -106,24 +106,24 @@ a:hover {
 
 .hero-bike {
   position: relative;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .hero-bike img {
   width: 100%;
   display: block;
-  mix-blend-mode: multiply;
 }
 
 .hero-bike::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 35%;
-  background: linear-gradient(to top, var(--bg-primary) 0%, transparent 100%);
+  inset: 0;
+  background:
+    linear-gradient(to top,  var(--bg-primary) 0%, transparent 45%),
+    linear-gradient(to right, var(--bg-primary) 0%, transparent 25%),
+    linear-gradient(to left,  var(--bg-primary) 0%, transparent 25%),
+    linear-gradient(to bottom, var(--bg-primary) 0%, transparent 20%);
   pointer-events: none;
 }
 
