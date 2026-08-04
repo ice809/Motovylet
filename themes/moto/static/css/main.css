@@ -98,32 +98,52 @@ a:hover {
 
 /* ── HOME HERO ── */
 .home-hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  min-height: 520px;
+  text-align: center;
   border-bottom: 1px solid var(--border);
-  background: radial-gradient(ellipse 70% 80% at 20% 50%, rgba(88, 166, 255, 0.06) 0%, transparent 70%);
+  background: var(--bg-primary);
   overflow: hidden;
-  padding: 0 1.5rem 0 calc((100% - 1100px) / 2 + 1.5rem);
+}
+
+.hero-bike {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-bike img {
+  width: 100%;
+  display: block;
+  mix-blend-mode: multiply;
+}
+
+.hero-bike::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background: linear-gradient(to top, var(--bg-primary) 0%, transparent 100%);
+  pointer-events: none;
 }
 
 .hero-text {
-  padding: 4rem 2rem 4rem 0;
-  max-width: 520px;
+  padding: 0 1.5rem 4rem;
+  max-width: 680px;
+  margin: 0 auto;
 }
 
 .hero-eyebrow {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--accent-orange);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .hero-title {
-  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.05;
@@ -135,7 +155,7 @@ a:hover {
 }
 
 .hero-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--text-secondary);
   font-weight: 400;
   line-height: 1.7;
@@ -147,7 +167,7 @@ a:hover {
   background: rgba(88, 166, 255, 0.12);
   border: 1px solid rgba(88, 166, 255, 0.35);
   color: var(--accent) !important;
-  padding: 0.75rem 1.75rem;
+  padding: 0.8rem 2rem;
   border-radius: 999px;
   font-weight: 600;
   font-size: 1rem;
@@ -158,24 +178,6 @@ a:hover {
   background: rgba(88, 166, 255, 0.22);
   border-color: rgba(88, 166, 255, 0.6);
   transform: translateY(-2px);
-}
-
-.hero-bike {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  height: 100%;
-  min-height: 520px;
-  position: relative;
-}
-
-.hero-bike img {
-  max-height: 540px;
-  width: 100%;
-  object-fit: contain;
-  object-position: right bottom;
-  filter: drop-shadow(-30px 10px 30px rgba(0,0,0,0.6));
-  margin-right: -1.5rem;
 }
 
 
