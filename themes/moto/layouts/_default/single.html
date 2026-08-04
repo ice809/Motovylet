@@ -2,7 +2,12 @@
 <article class="trip-article">
   <div class="article-hero">
     {{ with .Params.image }}
+    {{ $img := $.Resources.GetMatch . }}
+    {{ if $img }}
+    <div class="article-hero-image" style="background-image: url('{{ $img.RelPermalink }}')"></div>
+    {{ else }}
     <div class="article-hero-image" style="background-image: url('{{ $.RelPermalink }}{{ . }}')"></div>
+    {{ end }}
     {{ end }}
     <div class="article-hero-content container">
       <div class="article-meta">
