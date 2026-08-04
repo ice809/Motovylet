@@ -101,9 +101,10 @@ a:hover {
   position: relative;
   min-height: 500px;
   background-image: url('/Motovylet/images/harley.jpg');
-  background-size: cover;
+  background-size: auto 100%;
   background-position: right center;
   background-color: var(--bg-primary);
+  background-repeat: no-repeat;
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
