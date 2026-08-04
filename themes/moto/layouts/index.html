@@ -1,17 +1,25 @@
 {{ define "main" }}
 <div class="home-hero">
-  <div class="hero-content">
-    <h1 class="hero-title">Motovýlety 🏍️</h1>
-    <p class="hero-subtitle">Itineráře na Harley-Davidson Sportster</p>
+  <div class="hero-bg">
+    <img src="{{ "images/harley.jpg" | relURL }}" alt="Harley-Davidson Sportster" class="hero-bike-img" />
+    <div class="hero-gradient"></div>
+  </div>
+  <div class="hero-content container">
+    <div class="hero-text">
+      <p class="hero-eyebrow">🏍️ Harley-Davidson Sportster</p>
+      <h1 class="hero-title">Motovýlety</h1>
+      <p class="hero-subtitle">Itineráře na Harley‑Davidson Sportster.<br>Žádné dálnice. Jen dobré zatáčky.</p>
+      <a href="#vylety" class="hero-cta">Zobrazit výlety ↓</a>
+    </div>
   </div>
 </div>
 
-<section class="trips-section">
+<section class="trips-section" id="vylety">
   <div class="container">
     <div class="trips-grid">
       {{ range .Pages.ByDate.Reverse }}
+      {{ $page := . }}
       <a href="{{ .RelPermalink }}" class="trip-card">
-        {{ $page := . }}
         {{ with .Params.image }}
         <div class="trip-card-image" style="background-image: url('{{ $page.RelPermalink }}{{ . }}')"></div>
         {{ else }}

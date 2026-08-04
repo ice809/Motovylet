@@ -98,28 +98,99 @@ a:hover {
 
 /* ── HOME HERO ── */
 .home-hero {
-  padding: 5rem 1.5rem 4rem;
-  text-align: center;
-  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(88, 166, 255, 0.08) 0%, transparent 70%);
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
   border-bottom: 1px solid var(--border);
 }
 
-.hero-title {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #e6edf3 0%, #79c0ff 50%, #f0883e 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bike-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 65%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    var(--bg-primary) 35%,
+    rgba(13,17,23,0.85) 55%,
+    rgba(13,17,23,0.3) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 1.5rem;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-eyebrow {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-orange);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   margin-bottom: 1rem;
 }
 
+.hero-title {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  background: linear-gradient(135deg, #e6edf3 0%, #79c0ff 60%, #f0883e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.25rem;
+}
+
 .hero-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--text-secondary);
   font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 2rem;
 }
+
+.hero-cta {
+  display: inline-block;
+  background: rgba(88, 166, 255, 0.12);
+  border: 1px solid rgba(88, 166, 255, 0.35);
+  color: var(--accent) !important;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.hero-cta:hover {
+  background: rgba(88, 166, 255, 0.2);
+  border-color: rgba(88, 166, 255, 0.6);
+  transform: translateY(-2px);
+}
+
 
 /* ── TRIPS SECTION ── */
 .trips-section {
@@ -460,16 +531,35 @@ a:hover {
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .trips-grid {
     grid-template-columns: 1fr;
   }
 
-  .article-hero-image {
-    height: 260px;
+  .home-hero {
+    min-height: 420px;
   }
 
-  .home-hero {
-    padding: 3rem 1rem 2.5rem;
+  .hero-bike-img {
+    width: 100%;
+    opacity: 0.35;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(
+      to bottom,
+      var(--bg-primary) 0%,
+      rgba(13,17,23,0.6) 60%,
+      var(--bg-primary) 100%
+    );
+  }
+
+  .hero-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .article-hero-image {
+    height: 260px;
   }
 }
