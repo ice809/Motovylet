@@ -100,8 +100,10 @@ a:hover {
 .home-hero {
   position: relative;
   min-height: 500px;
+  background-color: var(--bg-primary);
   background-image: url('/Motovylet/images/hero-homepage.png');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center center;
   border-bottom: 1px solid var(--border);
   display: flex;
