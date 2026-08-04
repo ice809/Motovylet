@@ -1,0 +1,33 @@
+{{ define "main" }}
+<div class="home-hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Motovýlety 🏍️</h1>
+    <p class="hero-subtitle">Itineráře na Harley-Davidson Sportster</p>
+  </div>
+</div>
+
+<section class="trips-section">
+  <div class="container">
+    <div class="trips-grid">
+      {{ range .Pages.ByDate.Reverse }}
+      <a href="{{ .RelPermalink }}" class="trip-card">
+        {{ with .Params.image }}
+        <div class="trip-card-image" style="background-image: url('{{ . }}')"></div>
+        {{ else }}
+        <div class="trip-card-image trip-card-image--placeholder"></div>
+        {{ end }}
+        <div class="trip-card-body">
+          <div class="trip-meta">
+            {{ with .Params.distance }}<span class="badge">{{ . }}</span>{{ end }}
+            {{ with .Params.days }}<span class="badge">{{ . }} dny</span>{{ end }}
+          </div>
+          <h2 class="trip-card-title">{{ .Title }}</h2>
+          <p class="trip-card-desc">{{ .Description }}</p>
+          <span class="trip-card-link">Zobrazit itinerář →</span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

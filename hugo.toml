@@ -1,0 +1,25 @@
+baseURL = "https://ice809.github.io/Motovylet/"
+locale = "cs-CZ"
+title = "Motovýlety"
+theme = "moto"
+enableRobotsTXT = true
+enableGitInfo = false
+defaultContentLanguage = "cs"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  description = "Itineráře motovýletů na Harley-Davidson Sportster"
+  author = "Jan Vicher"
+
+[menu]
+  [[menu.main]]
+    name = "Výlety"
+    url = "/"
+    weight = 1

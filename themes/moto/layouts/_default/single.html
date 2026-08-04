@@ -1,0 +1,28 @@
+{{ define "main" }}
+<article class="trip-article">
+  <div class="article-hero">
+    {{ with .Params.image }}
+    <div class="article-hero-image" style="background-image: url('{{ . | relURL }}')"></div>
+    {{ end }}
+    <div class="article-hero-content container">
+      <div class="article-meta">
+        {{ with .Params.distance }}<span class="badge badge--large">📍 {{ . }}</span>{{ end }}
+        {{ with .Params.days }}<span class="badge badge--large">📅 {{ . }} dny</span>{{ end }}
+        {{ with .Params.country }}<span class="badge badge--large">🗺️ {{ . }}</span>{{ end }}
+      </div>
+      <h1 class="article-title">{{ .Title }}</h1>
+      {{ with .Description }}<p class="article-subtitle">{{ . }}</p>{{ end }}
+    </div>
+  </div>
+
+  <div class="article-body container">
+    <div class="article-content">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+
+<div class="back-link container">
+  <a href="{{ .Site.BaseURL }}">← Zpět na všechny výlety</a>
+</div>
+{{ end }}
