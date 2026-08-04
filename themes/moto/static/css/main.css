@@ -116,20 +116,26 @@ a:hover {
   background: linear-gradient(
     to right,
     var(--bg-primary) 0%,
-    var(--bg-primary) 38%,
-    rgba(13,17,23,0.75) 58%,
-    rgba(13,17,23,0.1) 100%
+    var(--bg-primary) 30%,
+    rgba(13,17,23,0.97) 42%,
+    rgba(13,17,23,0.85) 52%,
+    rgba(13,17,23,0.5) 65%,
+    rgba(13,17,23,0.15) 80%,
+    transparent 95%
   );
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 4rem 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 3rem;
 }
 
 .hero-text {
-  max-width: 480px;
+  max-width: 460px;
 }
 
 .hero-eyebrow {
