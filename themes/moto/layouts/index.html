@@ -11,8 +11,9 @@
     <div class="trips-grid">
       {{ range .Pages.ByDate.Reverse }}
       <a href="{{ .RelPermalink }}" class="trip-card">
+        {{ $page := . }}
         {{ with .Params.image }}
-        <div class="trip-card-image" style="background-image: url('{{ . }}')"></div>
+        <div class="trip-card-image" style="background-image: url('{{ $page.RelPermalink }}{{ . }}')"></div>
         {{ else }}
         <div class="trip-card-image trip-card-image--placeholder"></div>
         {{ end }}
