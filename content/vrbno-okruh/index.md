@@ -2,7 +2,7 @@
 title: "Jednodenní motovýlet okruh Ostrava – Vrbno – Bruntál – Šumperk"
 description: "Období přes Opavské údolí, Bruntál a Krnov až do Šumperka a Jeseníků. Čistě okresky s hezkými zatáčkami a 200 km čistého kluču."
 date: 2026-07-30
-image: "images/route-map.png"
+image: "images/vrbno_route_map.png"
 distance: "202 km"
 days: "1 (jednodenní)"
 country: "CZ"
