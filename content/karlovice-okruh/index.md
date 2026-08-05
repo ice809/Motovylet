@@ -1,7 +1,7 @@
 ---
 title: "Jednodenní motovýlet: Karlovický okruh (Jeseníky)"
 description: "Okruh z Ostravy přes Opavu, Bruntál, Andělskou Horu, Karlovice, Holčovice a Krnov podhůřím Hrubého Jeseníku a Zlatohorskou vrchovinou."
-date: 2026-08-05
+date: 2026-08-01
 image: "images/motovylet_karlovice_map_1785928984786.png"
 distance: "cca 200 km"
 days: "1 (jednodenní)"
